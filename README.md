@@ -1,48 +1,50 @@
-# ⚡ Smart Energy Consumption Prediction – KNIME Workflow
+# 🛡️ Car Insurance Claim Prediction – No-Code ML with KNIME
 
-This project uses the **KNIME Analytics Platform** to build a visual, no-code pipeline that analyzes historical energy usage data and predicts future consumption patterns. It aims to help industries, households, and planners optimize energy usage efficiently.
-
----
-
-## 🎯 Project Goals
-
-- Understand energy consumption trends over time
-- Clean and preprocess raw energy data
-- Use regression models to forecast future energy use
-- Visualize results with interactive charts and outputs
+A visual data science project that uses **KNIME Analytics Platform** to predict whether a customer will file a car insurance claim. This workflow helps insurance companies minimize risk and detect potential fraud by leveraging predictive analytics — no coding required!
 
 ---
 
-## 🧰 Tools & Technologies
+## 🎯 Objective
+
+Use customer, vehicle, and policy data to build a classification model that predicts the likelihood of a car insurance claim being made.
+
+---
+
+## ⚙️ Workflow Overview
+
+This KNIME-based workflow includes the following steps:
+
+1. **Data Import** – Load insurance dataset (.csv format)
+2. **Preprocessing** – Handle missing values, encode categorical variables
+3. **Feature Selection** – Correlation analysis to identify key predictors
+4. **Modeling** – Build and compare classification models:
+   - Logistic Regression
+   - Decision Tree
+   - Random Forest
+5. **Evaluation** – Accuracy, confusion matrix, ROC curve
+6. **Deployment Ready Output** – Export predictions & model scores
+
+---
+
+## 🛠️ Tools & Technologies
 
 | Tool | Purpose |
 |------|---------|
-| **KNIME** | Workflow design & ML |
+| **KNIME** | No-code ML workflow design |
 | **CSV Dataset** | Input data |
-| **Regression Nodes** | Prediction modeling |
-| **Plot Nodes** | Data visualization |
-| **Scorer / Statistics Nodes** | Performance evaluation |
+| **Classification Learner & Predictor** | Machine learning models |
+| **Scorer Node** | Evaluate performance |
+| **ROC Curve / Confusion Matrix** | Model visualization |
 
 ---
 
-## 📊 Key Workflow Components
-
-- **Data Reader** – Load raw CSV data
-- **Missing Value** – Handle null or missing values
-- **Normalizer** – Standardize input values
-- **Linear & Decision Tree Regression** – Model energy prediction
-- **Line Plot / Bar Plot** – Visualize trends and predictions
-- **Scorer** – Evaluate model accuracy (e.g., RMSE)
-
----
-
-## 🗂️ Project Contents
+## 🗂️ Project Structure
 
 ```bash
-energy-prediction-knime/
-├── energy_forecast.knwf          # Main KNIME workflow
-├── energy_data.csv               # Dataset file
+car-claim-prediction-knime/
+├── claim_prediction.knwf           # KNIME workflow file
+├── insurance_data.csv              # Input dataset
 ├── screenshots/
-│   ├── full_workflow.png
-│   ├── prediction_output.png
+│   ├── workflow_layout.png
+│   ├── confusion_matrix.png
 └── README.md
